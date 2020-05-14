@@ -1,6 +1,8 @@
 ---
 "$schema": https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json
 name: ZyLAB ONE Search Language
+fileTypes:
+- zlftsql
 patterns:
 - include: "#keywords"
 - include: "#strings"
@@ -8,7 +10,11 @@ repository:
   keywords:
     patterns:
     - name: keyword.control.zylab-ftsql
-      match: "\\b(if|while|for|return)\\b"
+      match: "(?i)[pw]/\\d+"
+    - name: keyword.other.zylab-ftsql
+      match: "(?i)\\b(AND|OR|NOT|TO|BOD|EOS|OEP|EOG|EOD|true|false)\\b"
+    - name: constant.numeric.zylab-ftsql
+      match: "\\b\\d+\\b"
   strings:
     name: string.quoted.double.zylab-ftsql
     begin: "\""
