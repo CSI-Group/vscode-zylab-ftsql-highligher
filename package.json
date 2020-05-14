@@ -1,0 +1,25 @@
+{
+    "name": "vscode-zylab-ftsql-highligher",
+    "displayName": "ZyLAB ONE Search Language",
+    "description": "Syntax highlighting for ZyLab ONE search language",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.45.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "zylab-ftsql",
+            "aliases": ["ZyLAB ONE Search Language", "zylab-ftsql"],
+            "extensions": [".zlftsql"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "zylab-ftsql",
+            "scopeName": "source.zlftsql",
+            "path": "./syntaxes/zylab-ftsql.tmLanguage.json"
+        }]
+    }
+}
