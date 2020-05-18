@@ -10,9 +10,9 @@ repository:
   keywords:
     patterns:
     - name: keyword.control.zylab-ftsql
-      match: "(?i)[pw]/\\d+"
+      match: "(?i)[pw]/\\d+|\\*|\\?|\\b~\\d*\\b"
     - name: keyword.other.zylab-ftsql
-      match: "(?i)\\b(AND|OR|NOT|TO|BOD|EOS|OEP|EOG|EOD|true|false)\\b"
+      match: "(?i)\\b(AND|OR|NOT|TO|IN|BOD|EOS|OEP|EOG|EOD|of|true|false)\\b"
     - name: constant.numeric.zylab-ftsql
       match: "\\b\\d+\\b"
   strings:
