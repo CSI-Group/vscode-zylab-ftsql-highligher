@@ -34,6 +34,6 @@ jobs:
       env:
         token: ${{ secrets.access_token }}
       run: |
-        npm install -g vsce
+        npm install vsce
         vsce login CSI-Group
         vsce publish -p $token
