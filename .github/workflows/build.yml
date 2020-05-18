@@ -31,9 +31,7 @@ jobs:
     - name: Publish to Marketplace
       with:
         token: ${{ secrets.access_token }}
-      env:
-        token: ${{ secrets.access_token }}
-      run: |
+    - run: |
         npm install vsce
         vsce login CSI-Group
-        vsce publish -p $token
+        vsce publish
