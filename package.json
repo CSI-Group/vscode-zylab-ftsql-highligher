@@ -3,6 +3,7 @@
     "displayName": "ZyLAB ONE Search Language",
     "description": "Syntax highlighting for ZyLab ONE search language",
     "version": "0.0.1",
+    "publisher": "CSI-Group",
     "engines": {
         "vscode": "^1.45.0"
     },
