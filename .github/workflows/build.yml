@@ -32,5 +32,5 @@ jobs:
       env:
         token: ${{ secrets.access_token }}
       run: |
-        npm install vsce
+        npm install -g vsce
         vsce publish -p $token
