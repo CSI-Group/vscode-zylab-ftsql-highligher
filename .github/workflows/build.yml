@@ -31,4 +31,4 @@ jobs:
         token: ${{ secrets.access_token }}
       run: |
         npm install -g vsce
-        vsce publish minor -p $token --no-git-tag-version
+        vsce publish -p $token
