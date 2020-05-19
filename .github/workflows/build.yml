@@ -1,7 +1,5 @@
 name: CI
 
-# Controls when the action will run. Triggers the workflow on push or pull request
-# events but only for the master branch
 on:
   push:
     branches: [ master, dev ]
@@ -25,12 +23,12 @@ jobs:
       
     - name: Convert YAML to JSON
       run: |
-        npm install js-yaml
+        npm install js-yaml --save-dev
         npx js-yaml syntaxes/zylab-ftsql.tmLanguage.yaml > syntaxes/zylab-ftsql.tmLanguage.json
 
     - name: Publish to Marketplace
       env:
         token: ${{ secrets.access_token }}
       run: |
-        npm install -g vsce
-        vsce publish -p $token
+        npm install vsce --save-dev
+        vsce publish minor -p $token
