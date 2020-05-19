@@ -23,7 +23,7 @@ jobs:
       
     - name: Convert YAML to JSON
       run: |
-        npm install js-yaml --save-dev
+        npm install js-yaml
         npx js-yaml syntaxes/zylab-ftsql.tmLanguage.yaml > syntaxes/zylab-ftsql.tmLanguage.json
 
     - name: Publish to Marketplace
@@ -31,4 +31,4 @@ jobs:
         token: ${{ secrets.access_token }}
       run: |
         npm install -g vsce
-        vsce publish -p $token
+        vsce publish minor -p $token
