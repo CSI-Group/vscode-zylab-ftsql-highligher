@@ -4,3 +4,4 @@
 .github
 vsc-extension-quickstart.md
 syntaxes/zylab-ftsql.tmLanguage.yaml
+node_modules
